@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@lucia-auth/nextjs': ^0.4.0
   '@types/node': 18.11.3
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.12
+  lucia-auth: ^0.3.1
   next: latest
   postcss: ^8.4.18
   react: 18.2.0
@@ -13,6 +15,8 @@ specifiers:
   typescript: 4.8.4
 
 dependencies:
+  '@lucia-auth/nextjs': 0.4.0_lucia-auth@0.3.1
+  lucia-auth: 0.3.1
   next: 13.0.7_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -27,6 +31,14 @@ devDependencies:
   typescript: 4.8.4
 
 packages:
+
+  /@lucia-auth/nextjs/0.4.0_lucia-auth@0.3.1:
+    resolution: {integrity: sha512-xuxMDVUxucM+zeLRXBr6HEBePtXeenP/iyqc+FgyTeNEEhS315AROwFxJ/Fq4b+5UFo4e/+gjRW+SCdGQMpRYA==}
+    peerDependencies:
+      lucia-auth: 0.3.x
+    dependencies:
+      lucia-auth: 0.3.1
+    dev: false
 
   /@next/env/13.0.7:
     resolution: {integrity: sha512-ZBclBRB7DbkSswXgbJ+muF5RxfgmAuQKAWL8tcm86aZmoiL1ZainxQK0hMcMYdh+IYG8UObAKV2wKB5O+6P4ng==}
@@ -148,6 +160,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@noble/hashes/1.1.5:
+    resolution: {integrity: sha512-LTMZiiLc+V4v1Yi16TD6aX2gmtKszNye0pQgbaLqkvhIqP7nVsSaJsWloGQjJfJ8offaoP5GtX3yY5swbcJxxQ==}
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -451,6 +467,13 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
+  /lucia-auth/0.3.1:
+    resolution: {integrity: sha512-nmi4B4KPngrnr6owJWpgluv/H+UWAlMAg7J4WJ71k0MlURen7EaTq9yHHtEr304ShsCFrwNvjywSz/aCO5ykIg==}
+    dependencies:
+      '@noble/hashes': 1.1.5
+      nanoid: 4.0.0
+    dev: false
+
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -472,6 +495,12 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid/4.0.0:
+    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /next/13.0.7_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-YfTifqX9vfHm+rSU/H/3xvzOHDkYuMuh4wsvTjiqj9h7qHEF7KHB66X4qrH96Po+ohdid4JY8YVGPziDwdXL0A==}
