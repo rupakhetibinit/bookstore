@@ -35,7 +35,7 @@ const login = (props: Props) => {
 							id='email'
 							name='email'
 							type='email'
-							className='peer w-full h-10 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600 placeholder-transparent'
+							className='peer mt-1 w-full h-10 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600 placeholder-transparent'
 							placeholder='Email Address'
 						/>
 						<label
