@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextIndex", "fullTextSearch"]
 }
 
 datasource db {
@@ -29,4 +30,29 @@ model Session {
 
   @@index([user_id])
   @@map("session")
+}
+
+model Book {
+  id          String @id @unique @default(cuid())
+  name        String
+  publisher   String
+  imageUrl    String
+  description String @db.Text
+  author      Author @relation(fields: [authorId], references: [id])
+  price       Int
+  stockAmount Int    @default(0)
+
+  authorId String
+
+  @@fulltext([name])
+  @@fulltext([name, description])
+}
+
+model Author {
+  id   String @id @unique @default(cuid())
+  name String
+
+  books Book[]
+
+  @@fulltext([name])
 }
