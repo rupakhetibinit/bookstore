@@ -17,6 +17,7 @@ model User {
   hashed_password String?
   email           String    @unique
   session         Session[]
+  role            Role      @default(USER)
 
   @@map("user")
 }
@@ -55,4 +56,9 @@ model Author {
   books Book[]
 
   @@fulltext([name])
+}
+
+enum Role {
+  USER
+  ADMIN
 }
