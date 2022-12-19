@@ -3,23 +3,25 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { signOut, getUser } from '@lucia-auth/nextjs/client';
 import Link from 'next/link';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-const handleSignOut = async () => {
-	try {
-		await signOut();
-		Router.push('/');
-	} catch (error) {
-		console.error(error);
-	}
-};
 const Home: NextPage = () => {
-	const [user, setUser] = useState<Lucia.UserAttributes>({ id: '', email: '' });
+	const [user, setUser] = useState<{ userId: string }>({ userId: '' });
+	const handleSignOut = async () => {
+		try {
+			await signOut();
+			setUser({ userId: '' });
+			// router.replace('/');
+		} catch (error) {
+			console.error(error);
+		}
+	};
 	const noth = async () => {
 		const thing = await getUser();
 		console.log(thing);
-		// setUser(thing);
+		//@ts-ignore
+		setUser(thing);
 	};
 	useEffect(() => {
 		noth();
@@ -31,8 +33,9 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Link href='/login'>Login</Link>
-			{user.id && (
+			{user?.userId && (
 				<button
+					// href='/'
 					className='px-6 py-2 bg-indigo-400 hover:bg-indigo-500 focus:bg-indigo-600 rounded-md text-white'
 					onClick={handleSignOut}>
 					Sign Out

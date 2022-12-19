@@ -44,7 +44,8 @@ const Index = () => {
 				password,
 			}),
 		});
-		if (response.redirected) return router.push(response.url);
+		console.log(response);
+		if (response.redirected) router.push(response.url);
 	};
 	return (
 		<div className='h-screen w-screen flex flex-col items-center justify-center'>
