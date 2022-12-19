@@ -6,7 +6,7 @@
 		"start": "next start",
 		"migrate": "yarn prisma migrate dev",
 		"format": "prettier --check --ignore-path .gitignore .",
-		"format:fix": "prettier --check --ignore-path .gitignore ."
+		"format:fix": "prettier --write --ignore-path .gitignore ."
 	},
 	"dependencies": {
 		"@lucia-auth/adapter-prisma": "^0.1.4",
