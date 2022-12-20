@@ -33,7 +33,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		if (adminOrNot?.role !== Role.ADMIN) {
 			return res.redirect(302, '/forbidden');
 		} else {
-			return res.redirect(302, '/admin/dashboard'); // redirect to profile page
+			return res.redirect(302, '/admin'); // redirect to admin page
 		}
 	} catch {
 		// invalid
