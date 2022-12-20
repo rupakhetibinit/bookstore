@@ -12,10 +12,13 @@
 		"@lucia-auth/adapter-prisma": "^0.1.4",
 		"@lucia-auth/nextjs": "^0.4.0",
 		"@prisma/client": "^4.7.1",
+		"clsx": "^1.2.1",
 		"lucia-auth": "^0.3.1",
 		"next": "latest",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"react-hydration-provider": "^1.0.1",
+		"react-responsive": "^9.0.2"
 	},
 	"devDependencies": {
 		"@types/node": "18.11.3",
