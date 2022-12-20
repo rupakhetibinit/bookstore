@@ -5,9 +5,12 @@ import { Toggle } from './ToggleButton';
 
 type Props = {
 	children?: ReactNode;
+	mobile?: ReactNode;
+	leftSideBar?: ReactNode;
+	content?: ReactNode;
 };
 
-const AdminLayout = ({ children }: Props) => {
+const AdminLayout = ({ content, leftSideBar, mobile }: Props) => {
 	const screenType = useScreenType();
 
 	const [menuOpen, toggle] = useToggle(false);
@@ -26,15 +29,16 @@ const AdminLayout = ({ children }: Props) => {
 						</div>
 					</>
 				)}
-				<div className='w-full h-full'>
-					<p>Dashboard</p>
-				</div>
+				<div className='w-full h-full px-4'>{content}</div>
 			</Screen>
 		);
 	}
 	return (
 		<Screen>
-			<BigTopBar />
+			<div className='flex gap-4'>
+				<div className='w-[250px]'>{leftSideBar}</div>
+				<div className='w-full'>{content}</div>
+			</div>
 		</Screen>
 	);
 };
@@ -44,15 +48,3 @@ export default AdminLayout;
 const Screen = ({ children }: Props) => {
 	return <div className='w-screen h-screen'>{children}</div>;
 };
-
-const BigTopBar = () => {
-	return (
-		<div className='w-full flex justify-between'>
-			<div>Logo</div>
-		</div>
-	);
-};
-
-interface PortalProps {
-	children: ReactNode;
-}
