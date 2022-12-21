@@ -17,7 +17,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const authRequest = new AuthRequest(auth, req, res);
 		const user = await auth.authenticateUser('email', email, password);
-		const session = await auth.createSession(user.userId);
+		const session = await auth.createSession(user.id);
 		authRequest.setSession(session); // set cookie
 		return res.redirect(302, '/'); // redirect to profile page
 	} catch {

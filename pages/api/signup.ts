@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 				email,
 			},
 		});
-		const session = await auth.createSession(user.userId);
+		const session = await auth.createSession(user.id);
 		const authRequest = new AuthRequest(auth, req, res);
 		authRequest.setSession(session); // set cookies
 		return res.redirect(302, '/'); // redirect user on account creations
