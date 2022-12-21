@@ -45,6 +45,6 @@ const AdminLayout = ({ content, leftSideBar, mobile }: Props) => {
 
 export default AdminLayout;
 
-const Screen = ({ children }: Props) => {
+export const Screen = ({ children }: Props) => {
 	return <div className='w-screen h-screen'>{children}</div>;
 };
