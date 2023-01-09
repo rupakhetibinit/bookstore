@@ -246,10 +246,82 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:4.22.0":
+  version: 4.22.0
+  resolution: "@tanstack/query-core@npm:4.22.0"
+  checksum: d24c13f8e21b65380230055a6673ae670aca5ee550c2f9a24b89fd3ac5243b465bb25f61b29da8ca285fc7fb0f4c2f8add3864f742eafac5131e777f3e52767a
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.22.0":
+  version: 4.22.0
+  resolution: "@tanstack/react-query@npm:4.22.0"
+  dependencies:
+    "@tanstack/query-core": 4.22.0
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: b146774b44a79dd5a6412d981ce04790e66da5a36f907a03c85c36f50a38fb4e4dfbfca7b1561c86b39fb0df1c0c1ae0a0ef2930c06b444da3f430b9bad450f1
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@trpc/client@npm:^10.8.1":
+  version: 10.8.1
+  resolution: "@trpc/client@npm:10.8.1"
+  peerDependencies:
+    "@trpc/server": 10.8.1
+  checksum: 06a7e6cca68d91188d2de826b7b1d5352af0761daa364fdb04723c3047b0e139125ee813ab66cffd82914f72d60ae3eb4d5a37f2db8484c9506766bf80dcc823
+  languageName: node
+  linkType: hard
+
+"@trpc/next@npm:^10.8.1":
+  version: 10.8.1
+  resolution: "@trpc/next@npm:10.8.1"
+  dependencies:
+    react-ssr-prepass: ^1.5.0
+  peerDependencies:
+    "@tanstack/react-query": ^4.3.8
+    "@trpc/client": 10.8.1
+    "@trpc/react-query": ^10.8.0
+    "@trpc/server": 10.8.1
+    next: "*"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 09c889e0e3ebb0e789e227a9420b168219064310b63e30649b26c1b738be41de460d88701f30b481016b82c5d66b03f6756606018dddc836b38f3e628c92315e
+  languageName: node
+  linkType: hard
+
+"@trpc/react-query@npm:^10.8.1":
+  version: 10.8.1
+  resolution: "@trpc/react-query@npm:10.8.1"
+  peerDependencies:
+    "@tanstack/react-query": ^4.3.8
+    "@trpc/client": 10.8.1
+    "@trpc/server": 10.8.1
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: dc2dc8f11883cea8837e8e0be918e7cec159f1445e46c5377a9a60100363c85ed1fd43d8af6d50e02d271ef68a5bf7e559c7b6e85e9ea80eb3d1a3137d9ec6ab
+  languageName: node
+  linkType: hard
+
+"@trpc/server@npm:^10.8.1":
+  version: 10.8.1
+  resolution: "@trpc/server@npm:10.8.1"
+  checksum: 91f86aad0166f98ee67e271d5c8f6301d832f351fb884f82ff4e95eef6edd7d0fc2b6dc777aea1951bce0d68e7ae3e622315847112daac70558aafadfc05f62e
   languageName: node
   linkType: hard
 
@@ -1751,6 +1823,15 @@ next@latest:
   languageName: node
   linkType: hard
 
+"react-ssr-prepass@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "react-ssr-prepass@npm:1.5.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: efe89b9f8b2053474613f56dfdbeb41d8ee2e572bf819a39377d95d3e4a9acf8a4a16e28d8d8034cb9ac2b316d11dc9e62217743e4322046d08175eb3b4fed3e
+  languageName: node
+  linkType: hard
+
 "react@npm:18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
@@ -1849,6 +1930,11 @@ next@latest:
     "@prisma/client": ^4.7.1
     "@tailwindcss/forms": ^0.5.3
     "@tailwindcss/typography": ^0.5.8
+    "@tanstack/react-query": ^4.22.0
+    "@trpc/client": ^10.8.1
+    "@trpc/next": ^10.8.1
+    "@trpc/react-query": ^10.8.1
+    "@trpc/server": ^10.8.1
     "@types/node": 18.11.3
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
@@ -1865,6 +1951,7 @@ next@latest:
     react-responsive: ^9.0.2
     tailwindcss: ^3.2.1
     typescript: 4.8.4
+    zod: ^3.20.2
   languageName: unknown
   linkType: soft
 
@@ -2146,6 +2233,15 @@ next@latest:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -2198,5 +2294,12 @@ next@latest:
   version: 1.10.2
   resolution: "yaml@npm:1.10.2"
   checksum: ce4ada136e8a78a0b08dc10b4b900936912d15de59905b2bf415b4d33c63df1d555d23acb2a41b23cf9fb5da41c256441afca3d6509de7247daa062fd2c5ea5f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.20.2":
+  version: 3.20.2
+  resolution: "zod@npm:3.20.2"
+  checksum: 04172f7e9350372684ccd298d4716908edc9113751295b6c4e1b3ea84e2af8997e504b33ba36f4741417bb2a5dc90bfd40501f6b0e7389df10e42a63d6d8366c
   languageName: node
   linkType: hard
