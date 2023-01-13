@@ -1,10 +1,7 @@
 import { z } from 'zod';
-import { procedure, router } from '../trpc';
 
 import type { CreateNextContextOptions } from '@trpc/server/adapters/next';
-import { AuthRequest } from '@lucia-auth/nextjs';
 import { inferAsyncReturnType, initTRPC } from '@trpc/server';
-import { auth } from '../../lib/lucia';
 import { createContext } from '../../pages/api/trpc/[trpc]';
 
 type Context = inferAsyncReturnType<typeof createContext>;
