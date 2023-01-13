@@ -7,11 +7,14 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
-	const [user, setUser] = useState<{ userId: string }>({ userId: '' });
+	const [user, setUser] = useState<{ email: string; id: string }>({
+		email: '',
+		id: '',
+	});
 	const handleSignOut = async () => {
 		try {
 			await signOut();
-			setUser({ userId: '' });
+			setUser({ email: '', id: '' });
 			// router.replace('/');
 		} catch (error) {
 			console.error(error);
@@ -33,7 +36,7 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Link href='/login'>Login</Link>
-			{user?.userId && (
+			{user?.email && (
 				<button
 					// href='/'
 					className='px-6 py-2 bg-indigo-400 hover:bg-indigo-500 focus:bg-indigo-600 rounded-md text-white'
