@@ -9,6 +9,8 @@
 		"format:fix": "prettier --write --ignore-path .gitignore ."
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.7.7",
+		"@heroicons/react": "^2.0.13",
 		"@lucia-auth/adapter-prisma": "^0.1.4",
 		"@lucia-auth/nextjs": "^0.4.0",
 		"@prisma/client": "^4.7.1",
@@ -19,8 +21,9 @@
 		"@trpc/server": "^10.8.1",
 		"clsx": "^1.2.1",
 		"lucia-auth": "^0.3.3",
-		"next": "latest",
+		"next": "^13.1.2",
 		"react": "18.2.0",
+		"react-aria": "^3.22.0",
 		"react-dom": "18.2.0",
 		"react-hydration-provider": "^1.0.1",
 		"react-responsive": "^9.0.2",
